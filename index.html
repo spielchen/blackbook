@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>BlackBook</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="body_center">
+    <div class="light"></div>
+    <div class="dark"><div class="content_img"></div><div class="content_about"></div></div>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-3 left">
+          <a href="#"><div class="logo"></div></a>
+        </div>
+        <div class="col-md-9 right">
+          <div class="search">
+            <form action="" method="get">
+              <img class="search_icon" src="img/icons8-search-100.png" alt="serch">
+              <input name="s" placeholder="Search" type="search">
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3 left">
+          <div class="menu">
+            <div class="menu_border">
+              <ul>
+                <li><a href="#home" onclick="openbox('home'); return false">home</a></li>
+                <li><a href="" onclick="openbox('shop'); return false">shop</a></li>
+                <li><a href="" onclick="openbox('about'); return false">about</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 right">
+          <div class="content">
+            <div class="content_text" id="home" style="display: block">
+            <p>DON'T HAVE ENOUGH <br> MONEY TO BUY A BOOK?<br> USE E-BOOK!</p>
+            </div>
+            <div class="content_text" id="shop" style="display: none">
+            <p>DON'T HAVE ENOUGH <br> MONEY TO BUY A BOOK?<br> USE E-BOOK!</p>
+            </div>
+            <div class="content_text" id="about" style="display: none">
+            <p> Many people like to read books. Some people buy books in bookstores, while others do not want to spend a lot of money and carry books with them, so they buy e-books. With an e-book you do not need to carry heavy textbooks to college, school, university, you do not need big bags and backpacks for this. All you need is just your phone or tablet. <br>
+            <br>
+            We provide access to e-books. <br> All books on our site belong to their authors and are protected by copyright. Books can not be returned.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-3 footer">
+          <span></span> <br>
+          <p>© BLACKBOOK 2018.</p>
+        </div>
+        <div class="col-md-9 right"></div>
+      </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script>
+      function openbox(id) {
+        var all = document.querySelectorAll(".content_text");
+        for (var i = 0; i < all.length; i++) {
+          if (all[i].id == id) {
+            all[i].style.display = (all[i].style.display == 'none')? 'block' : 'none';
+          } else {
+            all[i].style.display = 'none';
+          }
+        }
+      };
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
